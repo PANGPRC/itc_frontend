@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# itc_2025_frontend
+# itc_frontend
 =======
 # Getting Started with Create React App
 
