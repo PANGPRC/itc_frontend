@@ -13,7 +13,11 @@ const CoinCalculator = () => {
         targetAmount: parseFloat(targetAmount),
         coinDenominations: denominations.join(','),
       });
-      const response = await fetch(`http://localhost:8080/api/coins/calculate?${params.toString()}`, {
+
+      // Use localhost when frontend and backend are running on the same machine,
+      // Use 3.0.18.101 when frontend and backend are running on different machines
+      const response = await fetch(`http://3.0.18.101:8080/api/coins/calculate?${params.toString()}`, {
+      // const response = await fetch(`http://localhost:8080/api/coins/calculate?${params.toString()}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
